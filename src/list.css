@@ -1,0 +1,83 @@
+.container
+{
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    width: min(1000px, 70%);
+}
+
+.inputName
+{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.middle
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+.add-task-category
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.tasks
+{
+    display: flex;
+    min-width: 20px;
+    width: 70%;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.add-task
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.task
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.task-name, .task-buttons
+{
+    width: 50%;
+}
+
+.task-buttons
+{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.categories
+{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
