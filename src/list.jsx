@@ -62,6 +62,12 @@ function List() {
             }, 10);
             return;
         }
+
+        if (categories.length === 0) {
+            alert("Please add a category first.");
+            return;
+        }
+
         categories.filter(category => category.status === "Selected").map(category => {
             const newTask = { id: Date.now(), name: name, status: "Incomplete" };
             category.tasks.push(newTask);
@@ -74,6 +80,7 @@ function List() {
 
         saveData();
     };
+
     const handleAddCategory = () => {
         console.log("Add Category");
         const name = getName();
