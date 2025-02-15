@@ -2,20 +2,22 @@ import React from "react";
 
 function category(props)
 {
-    const {category, onDelete} = props;
+    const {category, onDelete, markAsNotSelected} = props;
 
     function handleDeleteCategory()
     {
         console.log("Delete Category");
         onDelete(category.id, 'category');
     };
-
+    
 
   return (
     <div className="category">
-      <div className="category-name">{category.name}</div>
+      <div  className={`category-name ${category.status === 'Selected' ? 'selected' : ''}`}  onClick={() => markAsNotSelected(category.id)}>{category.name}
+        
+      </div>
       <div className="category-buttons">
-        <button onClick={handleDeleteCategory}>Delete</button>
+        <img className="deleteImg" onClick={handleDeleteCategory} src="src/assets/delete.svg" alt="Delete" />
       </div>
     </div>
   );
